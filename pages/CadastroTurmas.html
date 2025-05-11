@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/CadastroTurmas.css">
+    <link rel="stylesheet" href="../styles/HeaderSecretaria.css">
+    <title>Horarios Fatec</title>
+</head>
+<body>
+
+  <!-- Cabeçalho da página com os logotipos -->
+    <header>
+        <div id="topo-header"> <!-- Container para as três logos alinhadas -->
+            <div>
+                <img src="../images/cps.png" alt="Logo do Centro Paula Souza" class="logo-header"> <!-- Logotipo da CPS -->
+            </div>
+            <div>
+                <img src="../images/fatec-jac.png" alt="Logo da Fatec de Jacareí" class="logo-header"> <!-- Logotipo da Fatec -->
+            </div>
+            <div>
+                <img src="../images/govsp.png" alt="Logo do Governo de São Paulo" class="logo-header"> <!-- Logotipo do Governo de SP -->
+            </div>
+        </div>
+        <div class="linha"> </div> <!-- Linha branca separadora -->
+
+        <!-- Navegação principal da página -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> <!-- Link para página inicial -->
+                <li><a href="pages/ConsultaProfessor.html">Professores</a></li> <!-- Link para página de professores -->
+                <li><a href="pages/Salas.html">Salas</a></li> 
+                <li class="secretaria-nav"><a href="../index.html">Sair da Secretaria</a></li> <!-- Link alinhado à direita -->
+            </ul>
+        </nav>
+        <div class="linha"> </div> <!-- Linha branca separadora -->
+    </header>
+
+  <!-- Bloco: Cadastro/Alteração de Turmas -->
+  <h2>Cadastro / Alteração de Turmas</h2>
+  <div class="bloco-cinza">
+    <form id="form-turma">
+      <label for="curso-turma">Curso:</label>
+      <select id="curso-turma" name="curso" required>
+        <option value="">Selecione um curso</option>
+        <option value="DSM">Desenvolvimento de Software Multiplataforma</option>
+        <option value="GP">Geoprocessamento</option>
+        <option value="MARH">Meio Ambiente e Recursos Hídricos</option>
+      </select>
+
+      <label for="nome-turma">Nome da Turma (Semestre):</label>
+      <input type="text" id="nome-turma" name="nome" placeholder="Nome da turma" required>
+
+      <label for="periodo-turma">Período:</label>
+      <select id="periodo-turma" name="periodo" required>
+        <option value="">Selecione o período</option>
+        <option value="Diurno">Diurno</option>
+        <option value="Noturno">Noturno</option>
+      </select>
+
+      <button type="submit" class="botao-turma">Salvar Turma</button>
+    </form>
+  </div>
+
+  <!-- Bloco: Lista de Turmas Cadastradas -->
+  <h2>Turmas Cadastradas</h2>
+  <div class="bloco-cinza">
+    <ul class="lista-turmas">
+      <li>Desenvolvimento de Software Multiplataforma - 1º SEMESTRE (Noturno)</li>
+      <li>Geoprocessamento - 3º SEMESTRE (Diurno)</li>
+      <li>Meio Ambiente e Recursos Hídricos - 2º SEMESTRE (Noturno)</li>
+      <!-- Outras turmas podem ser adicionadas aqui -->
+    </ul>
+  </div>
+   
+</body>
+</html>
