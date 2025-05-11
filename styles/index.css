@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão para o texto */
+}
+
+/* Estiliza o título da página */
+#titulo {
+    text-align: center; /* Centraliza o texto */
+    margin-top: 50px; /* Adiciona espaçamento superior */
+    margin-bottom: 60px; /* Adiciona espaçamento inferior */
+}
+
+/* Configuração para telas maiores (desktop) */
+@media (min-width: 769px) {
+    .cursos {
+        display: flex; /* Usa flexbox para exibição lado a lado */
+        flex-direction: row; /* Mantém os cursos na mesma linha */
+        align-items: center; /* Centraliza os itens verticalmente */
+        justify-content: space-between; /* Distribui os itens igualmente */
+        text-align: center; /* Centraliza o texto dentro dos elementos */
+    }
+
+    .curso {
+        width: 30%; /* Define a largura de cada curso */
+    }
+}
+
+/* Configuração para telas menores (mobile) */
+@media (max-width: 768px) {
+    .cursos {
+        display: flex; /* Usa flexbox */
+        flex-direction: column; /* Empilha os cursos verticalmente */
+        align-items: center; /* Centraliza os itens */
+        justify-content: space-around; /* Distribui o espaço entre os itens */
+        flex-wrap: wrap; /* Permite quebra de linha */
+        gap: 20px; /* Adiciona espaçamento entre os cursos */
+        padding: 20px; /* Adiciona espaçamento interno */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .curso {
+        width: 90%; /* Define uma largura maior para os cursos no mobile */
+    }
+}
+
+/* Estiliza os cursos */
+.curso {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os itens */
+    justify-content: center; /* Centraliza o conteúdo */
+    height: 100%; /* Define a altura total */
+}
+
+/* Estiliza os carrosséis de imagens */
+.logo-curso {
+    height: 200px; /* Define a altura fixa do carrossel */
+    width: 80%; /* Define a largura relativa ao contêiner */
+    background-color: white; /* Define cor de fundo */
+    border-radius: 10px; /* Arredonda as bordas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra sutil */
+    display: flex; /* Usa flexbox para alinhamento interno */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    position: relative; /* Define posicionamento relativo para os botões */
+}
+
+/* Estiliza as imagens dentro do carrossel */
+.imagem-curso {
+    width: 100%; /* Faz a imagem ocupar toda a largura */
+    height: 200px; /* Mantém altura fixa */
+    object-fit: contain; /* Garante que a imagem se ajuste sem cortar */
+    cursor: pointer; /* Torna a imagem clicável */
+}
+
+/* ====== ESTILOS DO MENU TOGGLE DE SEMESTRES ====== */
+
+.menu-toggle {
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.toggle-button {
+    background-color: #ccc; /* Cinza */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.toggle-button:hover {
+    background-color: #bbb;
+}
+
+.toggle-button .seta {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.toggle-button.aberto .seta {
+    transform: rotate(180deg); /* Vira a seta para cima */
+}
+
+.semestre-menu {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    display: none; /* Oculta por padrão */
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+.semestre-menu li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.semestre-menu li:last-child {
+    border-bottom: none;
+}
+
+.semestre-menu a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
